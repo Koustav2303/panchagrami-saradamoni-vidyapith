@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://koustav2303.github.io/panchagrami-saradamoni-vidyapith",
+  "homepage": "https://Koustav2303.github.io/panchagrami-saradamoni-vidyapith",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

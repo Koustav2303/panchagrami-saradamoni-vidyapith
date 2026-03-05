@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Changed BrowserRouter to HashRouter right here:
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 
 // Import all your individual section components
@@ -14,7 +15,6 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import NoticeBoard from './components/NoticeBoard';
 import Admission from './components/Admission';
-
 
 // The Home component stacks all your landing page sections in order
 const Home = () => (
