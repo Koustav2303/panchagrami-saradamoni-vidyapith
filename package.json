@@ -6,7 +6,7 @@
   "homepage": "https://Koustav2303.github.io/panchagrami-saradamoni-vidyapith",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && shx cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -32,6 +32,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "postcss": "^8.4.49",
+    "shx": "^0.4.0",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.5"
   }
