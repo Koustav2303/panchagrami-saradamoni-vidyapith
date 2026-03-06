@@ -7,7 +7,6 @@ import {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
- 
   const lat = 22.8032235;
   const lng = 87.4176659;
   
@@ -19,6 +18,13 @@ const Footer = () => {
     { name: 'Notices', href: '#notices' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Admission', href: '#admission' },
+  ];
+
+  // UPDATED: Specific links for social media icons
+  const socialLinks = [
+    { icon: <Facebook />, href: "https://www.facebook.com/panchagramisaradamonividyapith1969/" },
+    { icon: <Twitter />, href: "#" },
+    { icon: <Youtube />, href: "#" }
   ];
 
   return (
@@ -46,14 +52,17 @@ const Footer = () => {
               Dedicated to academic excellence and character building since 1969. A government-sponsored institution in the heart of Garhbeta.
             </p>
 
+            {/* UPDATED: Mapping the socialLinks array with correct hrefs and target attributes */}
             <div className="flex gap-4">
-              {[<Facebook />, <Twitter />, <Youtube />].map((icon, i) => (
+              {socialLinks.map((social, i) => (
                 <a 
                   key={i} 
-                  href="#" 
+                  href={social.href} 
+                  target={social.href !== "#" ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-school-blue hover:text-white transition-all duration-300 border border-white/5"
                 >
-                  {React.cloneElement(icon, { size: 18 })}
+                  {React.cloneElement(social.icon, { size: 18 })}
                 </a>
               ))}
             </div>
@@ -118,14 +127,16 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar - UPDATED WITH PORTFOLIO LINK */}
+        {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 text-center md:text-left">
             © {currentYear} Panchagrami Saradamani Vidyapith. Govt Sponsored.
           </div>
           
-          <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em]">
-            Developed with <Heart className="w-3 h-3 text-rose-500 fill-rose-500" /> by 
+          <div className="flex flex-wrap justify-center items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-center md:text-left">
+            <span>Developed with</span> 
+            <Heart className="w-3 h-3 text-rose-500 fill-rose-500" /> 
+            <span>by</span>
             <a 
               href="https://koustav2303.github.io/koustavpan-portfolio/" 
               target="_blank" 
@@ -133,6 +144,15 @@ const Footer = () => {
               className="text-white hover:text-school-gold underline underline-offset-4 decoration-school-blue hover:decoration-school-gold decoration-2 transition-all"
             >
               Koustav Pan
+            </a>
+            <span className="text-slate-500">&</span>
+            <a 
+              href="https://subhajit75.github.io/portfolio-subhajit75_1/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-school-gold underline underline-offset-4 decoration-school-blue hover:decoration-school-gold decoration-2 transition-all"
+            >
+              Subhajit Ghosh
             </a>
           </div>
         </div>
