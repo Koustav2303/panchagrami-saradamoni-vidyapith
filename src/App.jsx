@@ -1,6 +1,6 @@
 import React from 'react';
-// Changed BrowserRouter to HashRouter right here:
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+// 1. Switched back to BrowserRouter
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 
 // Import all your individual section components
@@ -32,8 +32,10 @@ const Home = () => (
 
 function App() {
   return (
-    <Router>
-      {/* 1. This component must stay inside the Router to access the navigation state */}
+    // 2. Added basename matching your EXACT GitHub repository name
+    <Router basename="/panchagrami-saradamoni-vidyapith">
+      
+      {/* This component must stay inside the Router to access the navigation state */}
       <ScrollToTop />
       
       {/* We apply a global font and background color to the entire app */}
