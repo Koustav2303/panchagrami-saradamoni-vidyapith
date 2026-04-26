@@ -34,7 +34,6 @@ const About = () => {
 
   return (
     <section id="about" className="relative py-24 bg-white overflow-hidden">
-      {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-3xl opacity-50" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-amber-50 rounded-full blur-3xl opacity-50" />
@@ -42,7 +41,6 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="text-school-gold font-bold uppercase tracking-[0.3em] text-sm mb-4 block">
@@ -58,10 +56,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* Left: Detailed Story */}
           <div className="lg:col-span-7 space-y-8">
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -75,7 +71,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Pillars Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pillars.map((pillar, idx) => (
                 <div key={idx} className="flex gap-4 p-4 hover:bg-slate-50 rounded-2xl transition-colors duration-300">
@@ -91,9 +86,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right: Stats & Vision Card */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Quick Stats Widget */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-50 text-center group hover:-translate-y-1 transition-transform">
@@ -106,7 +99,6 @@ const About = () => {
               ))}
             </div>
 
-            {/* Quote / Vision Card */}
             <div className="bg-school-blue rounded-3xl p-8 text-white relative overflow-hidden shadow-2xl shadow-blue-900/40">
               <div className="absolute -right-4 -bottom-4 opacity-10">
                 <GraduationCap size={160} />
@@ -131,7 +123,6 @@ const About = () => {
   );
 };
 
-// Helper Icon for the Quote Card
 const GraduationCap = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
